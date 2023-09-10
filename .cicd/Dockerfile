@@ -8,7 +8,7 @@ RUN mkdir -p /opt/i27/
 COPY ["${JAR_SOURCE}", "/opt/i27/i27cart-product.jar"]
 RUN chmod 777 /opt/i27/
 WORKDIR /opt/i27
-EXPOSE 8761
+EXPOSE 8080
 USER root
 #CMD java -jar $JAR_DEST 
 #CMD ["java", "-jar", "/opt/learner/$JAR_DEST"]

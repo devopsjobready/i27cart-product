@@ -144,7 +144,7 @@ pipeline {
             steps {
                 script {
                     imageValidation().call()
-                    dockerDeploy('dev', '5132', '8132').call()
+                    dockerDeploy('dev', '5132', '8080').call()
                     // dockerDeploy('dev', 'hostPort', 'contPort).call()
                 }
             }
@@ -158,7 +158,7 @@ pipeline {
             steps {
                 script {
                     imageValidation().call()
-                    dockerDeploy('tst', '6132', '8132').call()
+                    dockerDeploy('tst', '6132', '8080').call()
                 }
             }
         }
@@ -171,7 +171,7 @@ pipeline {
             steps {
                 script {
                     imageValidation().call()
-                    dockerDeploy('stage', '7132', '8132').call()
+                    dockerDeploy('stage', '7132', '8080').call()
                 }
             }
         }
@@ -192,7 +192,7 @@ pipeline {
             steps {
                 script {
                     imageValidation().call()
-                    dockerDeploy('prod', '8132', '8132').call()
+                    dockerDeploy('prod', '8132', '8080').call()
                 }
             }
         }
